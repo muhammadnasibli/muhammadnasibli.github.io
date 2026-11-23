@@ -467,6 +467,39 @@
       background: #eaf0f7;
     }
 
+    #contact .button.outline {
+      background: transparent;
+      color: white;
+      border-color: #8fa8c2;
+    }
+
+    #contact .button.outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .contact-details {
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-details li {
+      margin-bottom: 4px;
+      color: #d4dfeb;
+      font-size: 14px;
+    }
+
+    .contact-details a {
+      color: white;
+    }
+
     footer {
       padding: 24px 0;
       color: var(--muted);
@@ -539,7 +572,8 @@
     }
 
     @media (max-width: 400px) {
-      .project-content .button {
+      .project-content .button,
+      .contact-buttons .button {
         width: 100%;
         padding-inline: 12px;
       }
@@ -891,23 +925,63 @@
         </h2>
 
         <p>
-          Interested in my work? Explore my GitHub profile for
-          projects and updates.
+          Interested in my work or want to discuss an opportunity?
+          Reach out through any of the channels below.
         </p>
 
-        <a
-          class="button"
-          href="https://github.com/muhammadnasibli"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit My GitHub
-          <span aria-hidden="true">↗</span>
-        </a>
+        <div class="contact-buttons">
+          <a
+            class="button"
+            href="https://t.me/muhammadnasibli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Telegram
+            <span aria-hidden="true">↗</span>
+          </a>
 
-        <p class="link-note">
-          Opens in a new tab.
-        </p>
+          <a
+            class="button"
+            href="mailto:muhammednesibli777@gmail.com"
+          >
+            Email
+          </a>
+
+          <a class="button" href="tel:+994555550111">
+            Call
+          </a>
+
+          <a
+            class="button outline"
+            href="https://github.com/muhammadnasibli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <ul class="contact-details">
+          <li>
+            Telegram:
+            <a
+              href="https://t.me/muhammadnasibli"
+              target="_blank"
+              rel="noopener noreferrer"
+            >@muhammadnasibli</a>
+          </li>
+          <li>
+            Email:
+            <a href="mailto:muhammednesibli777@gmail.com">
+              muhammednesibli777@gmail.com
+            </a>
+          </li>
+          <li>
+            Phone:
+            <a href="tel:+994555550111">+994 55 555 01 11</a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
