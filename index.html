@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Muhammad Nasibli — Data Analyst and Business Intelligence Analyst. Explore my data analysis and visualization projects.">
+  <title>Muhammad Nasibli | Data & BI Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #24476a;
+      --navy-dark: #17324d;
+      --text: #1e293b;
+      --muted: #526176;
+      --line: #dce4ed;
+      --soft: #f4f7fb;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: var(--navy); }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #b46915;
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 20px;
+      padding: 10px 18px;
+      background: var(--navy);
+      color: white;
+      z-index: 100;
+    }
+
+    .skip-link:focus { top: 12px; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, .97);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navigation {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 19px;
+      font-weight: 750;
+      text-decoration: none;
+      letter-spacing: -.5px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--muted);
+      padding-block: 8px;
+    }
+
+    nav a:hover { color: var(--navy); }
+
+    .hero {
+      padding: 100px 0 90px;
+      background:
+        radial-gradient(ellipse at top right, #eaf1f9, transparent 65%);
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      color: var(--navy-dark);
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(42px, 7vw, 72px);
+      letter-spacing: -2.5px;
+    }
+
+    .role {
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-size: clamp(18px, 2.8vw, 25px);
+      font-weight: 600;
+    }
+
+    .intro {
+      max-width: 610px;
+      font-size: 19px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 22px;
+      border: 1px solid var(--navy);
+      border-radius: 8px;
+      color: white;
+      background: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background .2s;
+    }
+
+    .button:hover { background: var(--navy-dark); }
+
+    .button.secondary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .button.secondary:hover { background: var(--soft); }
+
+    section { padding: 74px 0; }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: clamp(28px, 4vw, 36px);
+      letter-spacing: -1px;
+    }
+
+    .section-description {
+      max-width: 650px;
+      color: var(--muted);
+      margin: 0 0 32px;
+    }
+
+    #projects { background: var(--soft); }
+
+    .project {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(23, 50, 77, .04);
+    }
+
+    .project-overview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-preview {
+      padding: 38px;
+      background: #eaf0f7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .preview-label {
+      font-size: 12px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .project-preview h3 {
+      font-size: 27px;
+      margin: 12px 0 24px;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 10px;
+    }
+
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: white;
+      border-radius: 8px;
+      padding: 13px 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .metric strong {
+      color: var(--navy-dark);
+      font-size: 18px;
+    }
+
+    .period {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 16px 0 0;
+    }
+
+    .project-content { padding: 38px; }
+
+    .project-content h3 {
+      font-size: 26px;
+      margin: 12px 0 16px;
+    }
+
+    .project-content p { color: var(--muted); }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 5px 11px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    details { border-top: 1px solid var(--line); }
+
+    summary {
+      cursor: pointer;
+      padding: 20px 32px;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    summary:hover { background: var(--soft); }
+
+    .case-study {
+      padding: 0 32px 32px;
+      max-width: 850px;
+    }
+
+    .case-study h4 {
+      margin: 24px 0 8px;
+      color: var(--navy-dark);
+      font-size: 17px;
+    }
+
+    .case-study p,
+    .case-study li { color: var(--muted); }
+
+    .case-study li { margin-bottom: 10px; }
+
+    .case-study ul { padding-left: 22px; }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-layout p { color: var(--muted); }
+
+    .focus-panel {
+      background: var(--soft);
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .focus-panel h3 {
+      margin: 0 0 16px;
+      font-size: 19px;
+    }
+
+    .focus-panel ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .focus-panel li { margin-bottom: 9px; }
+
+    #contact {
+      background: var(--navy-dark);
+      color: white;
+    }
+
+    #contact h2 { color: white; }
+
+    #contact p {
+      color: #d4dfeb;
+      max-width: 600px;
+    }
+
+    #contact .button {
+      background: white;
+      color: var(--navy-dark);
+      border-color: white;
+    }
+
+    #contact .button:hover { background: #eaf0f7; }
+
+    footer {
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a { text-decoration: none; }
+
+    @media (max-width: 720px) {
+      .navigation {
+        padding: 14px 0;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      nav { gap: 24px; }
+
+      html { scroll-padding-top: 125px; }
+
+      .hero { padding: 64px 0; }
+
+      section { padding: 54px 0; }
+
+      .project-overview,
+      .about-layout { grid-template-columns: 1fr; }
+
+      .about-layout { gap: 24px; }
+
+      .project-preview,
+      .project-content { padding: 26px; }
+
+      summary { padding: 20px 26px; }
+
+      .case-study { padding: 0 26px 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container navigation">
+      <a class="brand" href="#home" aria-label="Muhammad Nasibli home">
+        Muhammad Nasibli
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">Data & Business Intelligence Portfolio</p>
+        <h1>Muhammad Nasibli</h1>
+        <p class="role">
+          Data Analyst | Business Intelligence Analyst
+        </p>
+        <p class="intro">
+          I turn data into clear insights through analysis,
+          visualization, and business intelligence.
+        </p>
+
+        <div class="buttons">
+          <a class="button" href="#projects">Explore My Projects</a>
+          <a class="button secondary"
+             href="https://github.com/muhammadnasibli">
+            View GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow">Selected work</p>
+        <h2 class="section-title" id="projects-title">
+          From data to insight.
+        </h2>
+        <p class="section-description">
+          Personal projects exploring business questions through
+          data analysis and clear, interactive visualizations.
+        </p>
+
+        <article class="project">
+          <div class="project-overview">
+            <div class="project-preview">
+              <span class="preview-label">Project snapshot</span>
+              <h3>Olist Sales & Delivery Overview</h3>
+
+              <div class="metrics">
+                <div class="metric">
+                  <span>Total sales · excluding freight</span>
+                  <strong>2,981,759</strong>
+                </div>
+                <div class="metric">
+                  <span>Delivered orders</span>
+                  <strong>21,931</strong>
+                </div>
+                <div class="metric">
+                  <span>Late delivery rate</span>
+                  <strong>3.50%</strong>
+                </div>
+              </div>
+
+              <p class="period">
+                Selected order purchase period: Jan–Aug 2017
+              </p>
+            </div>
+
+            <div class="project-content">
+              <p class="eyebrow">Featured project · Tableau</p>
+              <h3>Olist Sales & Delivery Analysis</h3>
+              <p>
+                An interactive dashboard examining monthly sales,
+                sales by state, and delivery performance for
+                delivered orders.
+              </p>
+              <p>
+                The dashboard connects sales and delivery metrics,
+                with state selections filtering the charts and KPIs.
+              </p>
+
+              <div class="tags" aria-label="Project topics">
+                <span class="tag">Tableau</span>
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Sales Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <details>
+            <summary>View project details</summary>
+            <div class="case-study">
+              <h4>Business question</h4>
+              <p>
+                How did sales vary across the selected months and
+                states, and how frequently did delivered orders
+                arrive later than estimated?
+              </p>
+
+              <h4>Dashboard scope</h4>
+              <p>
+                The analysis focuses on delivered orders placed
+                between January 1 and August 31, 2017. All dashboard
+                charts and KPIs use the same selected period.
+              </p>
+
+              <h4>Key findings</h4>
+              <ul>
+                <li>
+                  Monthly sales increased overall, rising from
+                  approximately 112K in January to 543K in August,
+                  with declines in April and June.
+                </li>
+                <li>
+                  SP had the highest sales among the displayed
+                  states, followed by RJ and MG.
+                </li>
+                <li>
+                  Of 21,931 delivered orders, 21,162 were on time,
+                  768 were late, and one had an unknown delivery
+                  date. The late delivery rate was 3.50%.
+                </li>
+              </ul>
+
+              <h4>Metric definitions</h4>
+              <ul>
+                <li>
+                  <strong>Total Sales:</strong>
+                  Sum of product prices for delivered orders in
+                  the selected purchase period, excluding freight.
+                </li>
+                <li>
+                  <strong>Delivered Orders:</strong>
+                  Number of unique delivered orders placed during
+                  the selected period.
+                </li>
+                <li>
+                  <strong>Late Delivery Rate:</strong>
+                  Late orders divided by delivered orders with
+                  known delivery dates. Unknown delivery dates
+                  are excluded from the denominator.
+                </li>
+              </ul>
+
+              <h4>Interpretation note</h4>
+              <p>
+                These findings describe the selected eight-month
+                period, not the full dataset. The dashboard shows
+                patterns but does not establish the causes of sales
+                changes or delivery delays.
+              </p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h2 class="section-title" id="about-title">
+            Clear analysis. Meaningful insights.
+          </h2>
+          <p>
+            I'm Muhammad Nasibli, and I'm building a portfolio
+            focused on data analysis and business intelligence.
+          </p>
+          <p>
+            Through personal projects, I explore business questions,
+            define useful metrics, and present findings through
+            clear visualizations.
+          </p>
+        </div>
+
+        <div class="focus-panel">
+          <h3>Current focus</h3>
+          <ul>
+            <li>Interactive dashboards with Tableau</li>
+            <li>Sales and delivery performance analysis</li>
+            <li>KPI definitions and interpretation</li>
+            <li>Communicating findings clearly</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow" style="color: #c1d3e6;">Get in touch</p>
+        <h2 class="section-title" id="contact-title">
+          Let's connect.
+        </h2>
+        <p>
+          Interested in my work? Explore my GitHub profile for
+          projects and updates.
+        </p>
+        <a class="button"
+           href="https://github.com/muhammadnasibli">
+          Visit My GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© Muhammad Nasibli</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
