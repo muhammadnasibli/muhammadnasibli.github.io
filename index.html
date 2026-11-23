@@ -1022,6 +1022,142 @@
               </figcaption>
             </figure>
           </div>
+
+          <details>
+            <summary>
+              View project details and findings
+            </summary>
+
+            <div class="case-study">
+              <h4>Business question</h4>
+
+              <p>
+                How did video game sales change across release
+                years from 2000 to 2005, which genres sold the
+                most, and which region contributed the largest
+                share of those sales?
+              </p>
+
+              <h4>About the data</h4>
+
+              <p>
+                The project uses the
+                <strong>Video Game Sales</strong> dataset published
+                on Kaggle. It lists games that sold more than
+                <strong>100,000 copies</strong>, based on data
+                scraped from <strong>VGChartz</strong>.
+              </p>
+
+              <p>
+                Each game is described by its name, platform,
+                release year, genre, and publisher. Sales are given
+                in <strong>millions of copies</strong> for North
+                America, Europe, Japan, other regions, and
+                worldwide.
+              </p>
+
+              <p>
+                <strong>Source:</strong>
+                <a
+                  href="https://www.kaggle.com/datasets/gregorut/videogamesales"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kaggle — Video Game Sales
+                </a>
+                (used here for non-commercial portfolio purposes).
+              </p>
+
+              <h4>What I did in Tableau</h4>
+
+              <div class="preparation-note">
+                <p>
+                  I connected the dataset to
+                  <strong>Tableau</strong> and checked the release
+                  years and the number of game records in each year
+                  before choosing the period to analyse.
+                </p>
+
+                <p>
+                  I then built a dashboard with
+                  <strong>three linked views</strong>: sales by
+                  release year, sales by genre, and sales by region.
+                  A <strong>genre filter</strong> lets the viewer
+                  explore how each genre changes the other charts.
+                </p>
+              </div>
+
+              <h4>Dashboard scope</h4>
+
+              <p>
+                The analysis focuses on games released between
+                <strong>2000 and 2005</strong>. All charts and KPIs
+                use the same release-year selection. Games with an
+                unknown release year cannot appear in the year-based
+                views.
+              </p>
+
+              <h4>Key findings</h4>
+
+              <ul>
+                <li>
+                  Total sales across the period were
+                  <strong>2,165.65 million copies</strong>.
+                </li>
+
+                <li>
+                  Sales by release year rose from
+                  <strong>201.56 million in 2000</strong> to
+                  <strong>459.94 million in 2005</strong>, with a
+                  dip to <strong>357.85 million in 2003</strong>.
+                </li>
+
+                <li>
+                  <strong>Action</strong> had the highest sales
+                  among genres, with about
+                  <strong>410 million copies</strong>.
+                </li>
+
+                <li>
+                  <strong>North America</strong> accounted for about
+                  <strong>52.8%</strong> of sales in the selected
+                  period.
+                </li>
+              </ul>
+
+              <h4>Metric definitions</h4>
+
+              <ul>
+                <li>
+                  <strong>Total Sales:</strong>
+                  Sum of worldwide sales, in millions of copies, for
+                  games released in the selected years.
+                </li>
+
+                <li>
+                  <strong>Top Genre:</strong>
+                  The genre with the highest total sales in the
+                  selected period.
+                </li>
+
+                <li>
+                  <strong>North America share:</strong>
+                  North America sales divided by worldwide sales in
+                  the selected period.
+                </li>
+              </ul>
+
+              <h4>Interpretation note</h4>
+
+              <p>
+                These findings describe games released in
+                2000–2005, not the full dataset. The figures come
+                from a scraped, third-party source and show sales
+                patterns only. They do not explain why sales
+                changed.
+              </p>
+            </div>
+          </details>
         </article>
       </div>
     </section>
