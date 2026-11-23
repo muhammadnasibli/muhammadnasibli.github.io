@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Muhammad Nasibli — Data Analyst and Business Intelligence Analyst. Explore my data analysis and visualization portfolio."
+    content="Muhammad Nasibli — Data Analyst and Business Intelligence Analyst. Explore projects using R, SQL, and Tableau."
   >
 
   <title>Muhammad Nasibli | Data & BI Portfolio</title>
@@ -377,12 +377,33 @@
       color: var(--muted);
     }
 
+    .case-study strong {
+      color: var(--navy-dark);
+      font-weight: 750;
+    }
+
     .case-study ul {
       padding-left: 22px;
     }
 
     .case-study li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .preparation-note {
+      margin: 16px 0 24px;
+      padding: 18px 22px;
+      border-left: 4px solid var(--navy);
+      border-radius: 0 8px 8px 0;
+      background: var(--soft);
+    }
+
+    .preparation-note p {
+      margin: 0 0 12px;
+    }
+
+    .preparation-note p:last-child {
+      margin-bottom: 0;
     }
 
     .about-layout {
@@ -511,6 +532,10 @@
       .case-study {
         padding: 0 26px 26px;
       }
+
+      .preparation-note {
+        padding: 16px;
+      }
     }
 
     @media (max-width: 400px) {
@@ -604,7 +629,7 @@
 
         <p class="section-description">
           Personal projects exploring business questions through
-          data analysis and clear, interactive visualizations.
+          data preparation, analysis, and interactive visualizations.
         </p>
 
         <article class="project" aria-labelledby="olist-title">
@@ -640,7 +665,7 @@
 
             <div class="project-content">
               <p class="eyebrow">
-                Featured project · Tableau
+                Featured project · R, SQL & Tableau
               </p>
 
               <h3 id="olist-title">
@@ -654,12 +679,16 @@
               </p>
 
               <p>
-                Select a state in the interactive dashboard to
-                filter the charts and KPIs.
+                Data prepared using SQL within R and visualized
+                in Tableau. Select a state in the interactive
+                dashboard to filter the charts and KPIs.
               </p>
 
               <div class="tags" aria-label="Project topics">
+                <span class="tag">R</span>
+                <span class="tag">SQL</span>
                 <span class="tag">Tableau</span>
+                <span class="tag">Data Preparation</span>
                 <span class="tag">Data Visualization</span>
                 <span class="tag">Sales Analysis</span>
               </div>
@@ -725,6 +754,29 @@
                 arrive later than estimated?
               </p>
 
+              <h4>Data Preparation · R & SQL</h4>
+
+              <div class="preparation-note">
+                <p>
+                  Before building the Tableau dashboard, I used
+                  <strong>SQL within R</strong> to query and prepare
+                  the data for analysis. I focused on
+                  <strong>delivered orders</strong> and defined
+                  consistent sales and delivery metrics.
+                </p>
+
+                <p>
+                  Product sales were calculated
+                  <strong>excluding freight</strong>.
+                  Orders with unknown delivery dates were
+                  <strong>retained in the total order count</strong>
+                  but excluded from the
+                  <strong>late-delivery calculation</strong>.
+                  The prepared dataset was then exported for
+                  visualization in Tableau.
+                </p>
+              </div>
+
               <h4>Dashboard scope</h4>
 
               <p>
@@ -738,19 +790,23 @@
               <ul>
                 <li>
                   Monthly sales increased overall, rising from
-                  approximately 112K in January to 543K in August,
-                  with declines in April and June.
+                  <strong>approximately 112K in January</strong> to
+                  <strong>543K in August</strong>, with declines
+                  in April and June.
                 </li>
 
                 <li>
-                  SP had the highest sales among the displayed
-                  states, followed by RJ and MG.
+                  <strong>SP</strong> had the highest sales among
+                  the displayed states, followed by
+                  <strong>RJ and MG</strong>.
                 </li>
 
                 <li>
-                  Of 21,931 delivered orders, 21,162 were on time,
-                  768 were late, and one had an unknown delivery
-                  date. The late delivery rate was 3.50%.
+                  Of <strong>21,931 delivered orders</strong>,
+                  <strong>21,162 were on time</strong>,
+                  <strong>768 were late</strong>, and
+                  <strong>one had an unknown delivery date</strong>.
+                  The late delivery rate was <strong>3.50%</strong>.
                 </li>
               </ul>
 
@@ -816,6 +872,7 @@
           <h3>Current focus</h3>
 
           <ul>
+            <li>Data preparation and analysis using R and SQL</li>
             <li>Interactive dashboards with Tableau</li>
             <li>Sales and delivery performance analysis</li>
             <li>KPI definitions and interpretation</li>
