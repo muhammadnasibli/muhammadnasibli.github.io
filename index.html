@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Muhammad Nasibli — Data Analyst and Business Intelligence Analyst. Explore my data analysis and visualization projects.">
+
+  <meta
+    name="description"
+    content="Muhammad Nasibli — Data Analyst and Business Intelligence Analyst. Explore my data analysis and visualization portfolio."
+  >
+
   <title>Muhammad Nasibli | Data & BI Portfolio</title>
 
   <style>
@@ -18,7 +22,9 @@
       --white: #ffffff;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -27,14 +33,17 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Arial, sans-serif;
-      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
       background: var(--white);
+      color: var(--text);
       line-height: 1.7;
+      overflow-wrap: break-word;
     }
 
-    a { color: var(--navy); }
+    a {
+      color: var(--navy);
+    }
 
     a:focus-visible,
     summary:focus-visible {
@@ -51,19 +60,21 @@
       position: absolute;
       top: -100px;
       left: 20px;
+      z-index: 100;
       padding: 10px 18px;
       background: var(--navy);
       color: white;
-      z-index: 100;
     }
 
-    .skip-link:focus { top: 12px; }
+    .skip-link:focus {
+      top: 12px;
+    }
 
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255, 255, 255, .97);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--line);
     }
 
@@ -78,8 +89,8 @@
     .brand {
       font-size: 19px;
       font-weight: 750;
+      letter-spacing: -0.5px;
       text-decoration: none;
-      letter-spacing: -.5px;
     }
 
     nav {
@@ -89,19 +100,24 @@
     }
 
     nav a {
+      padding-block: 8px;
+      color: var(--muted);
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
-      color: var(--muted);
-      padding-block: 8px;
     }
 
-    nav a:hover { color: var(--navy); }
+    nav a:hover {
+      color: var(--navy);
+    }
 
     .hero {
       padding: 100px 0 90px;
-      background:
-        radial-gradient(ellipse at top right, #eaf1f9, transparent 65%);
+      background: radial-gradient(
+        ellipse at top right,
+        #eaf1f9,
+        transparent 65%
+      );
     }
 
     .eyebrow {
@@ -113,7 +129,9 @@
       text-transform: uppercase;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       color: var(--navy-dark);
       line-height: 1.2;
     }
@@ -133,9 +151,9 @@
 
     .intro {
       max-width: 610px;
-      font-size: 19px;
-      color: var(--muted);
       margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 19px;
     }
 
     .buttons {
@@ -148,27 +166,37 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      gap: 8px;
+      min-height: 46px;
       padding: 12px 22px;
       border: 1px solid var(--navy);
       border-radius: 8px;
-      color: white;
       background: var(--navy);
-      font-weight: 600;
-      text-decoration: none;
+      color: white;
       font-size: 14px;
-      transition: background .2s;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s;
     }
 
-    .button:hover { background: var(--navy-dark); }
+    .button:hover {
+      background: var(--navy-dark);
+    }
 
     .button.secondary {
       background: white;
       color: var(--navy);
     }
 
-    .button.secondary:hover { background: var(--soft); }
+    .button.secondary:hover {
+      background: var(--soft);
+    }
 
-    section { padding: 74px 0; }
+    section {
+      padding: 74px 0;
+    }
 
     .section-title {
       margin: 0 0 16px;
@@ -178,18 +206,20 @@
 
     .section-description {
       max-width: 650px;
-      color: var(--muted);
       margin: 0 0 32px;
+      color: var(--muted);
     }
 
-    #projects { background: var(--soft); }
+    #projects {
+      background: var(--soft);
+    }
 
     .project {
-      background: white;
+      overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(23, 50, 77, .04);
+      background: white;
+      box-shadow: 0 8px 30px rgba(23, 50, 77, 0.04);
     }
 
     .project-overview {
@@ -198,24 +228,24 @@
     }
 
     .project-preview {
-      padding: 38px;
-      background: #eaf0f7;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 38px;
+      background: #eaf0f7;
     }
 
     .preview-label {
+      color: var(--navy);
       font-size: 12px;
+      font-weight: 700;
       letter-spacing: 1.6px;
       text-transform: uppercase;
-      color: var(--navy);
-      font-weight: 700;
     }
 
     .project-preview h3 {
-      font-size: 27px;
       margin: 12px 0 24px;
+      font-size: 27px;
     }
 
     .metrics {
@@ -225,15 +255,15 @@
 
     .metric {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 8px;
-      background: white;
-      border-radius: 8px;
       padding: 13px 16px;
-      font-size: 13px;
+      border-radius: 8px;
+      background: white;
       color: var(--muted);
+      font-size: 13px;
     }
 
     .metric strong {
@@ -242,51 +272,98 @@
     }
 
     .period {
-      font-size: 12px;
-      color: var(--muted);
       margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 12px;
     }
 
-    .project-content { padding: 38px; }
+    .project-content {
+      padding: 38px;
+    }
 
     .project-content h3 {
-      font-size: 26px;
       margin: 12px 0 16px;
+      font-size: 26px;
     }
 
-    .project-content p { color: var(--muted); }
+    .project-content p {
+      color: var(--muted);
+    }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 22px;
+      margin: 22px 0;
     }
 
     .tag {
       padding: 5px 11px;
-      background: var(--soft);
       border: 1px solid var(--line);
       border-radius: 20px;
-      font-size: 12px;
+      background: var(--soft);
       color: var(--navy);
+      font-size: 12px;
       font-weight: 600;
     }
 
-    details { border-top: 1px solid var(--line); }
+    .link-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .dashboard-section {
+      padding: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .dashboard-heading {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+
+    .dashboard-figure {
+      margin: 0;
+    }
+
+    .dashboard-figure a {
+      display: block;
+      border-radius: 10px;
+    }
+
+    .dashboard-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .dashboard-caption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
 
     summary {
-      cursor: pointer;
       padding: 20px 32px;
       color: var(--navy);
       font-weight: 700;
+      cursor: pointer;
     }
 
-    summary:hover { background: var(--soft); }
+    summary:hover {
+      background: var(--soft);
+    }
 
     .case-study {
-      padding: 0 32px 32px;
       max-width: 850px;
+      padding: 0 32px 32px;
     }
 
     .case-study h4 {
@@ -296,26 +373,34 @@
     }
 
     .case-study p,
-    .case-study li { color: var(--muted); }
+    .case-study li {
+      color: var(--muted);
+    }
 
-    .case-study li { margin-bottom: 10px; }
+    .case-study ul {
+      padding-left: 22px;
+    }
 
-    .case-study ul { padding-left: 22px; }
+    .case-study li {
+      margin-bottom: 10px;
+    }
 
     .about-layout {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
-      gap: 60px;
       align-items: start;
+      gap: 60px;
     }
 
-    .about-layout p { color: var(--muted); }
+    .about-layout p {
+      color: var(--muted);
+    }
 
     .focus-panel {
-      background: var(--soft);
       padding: 28px;
-      border-radius: 12px;
       border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--soft);
     }
 
     .focus-panel h3 {
@@ -329,27 +414,37 @@
       color: var(--muted);
     }
 
-    .focus-panel li { margin-bottom: 9px; }
+    .focus-panel li {
+      margin-bottom: 9px;
+    }
 
     #contact {
       background: var(--navy-dark);
       color: white;
     }
 
-    #contact h2 { color: white; }
+    #contact .eyebrow {
+      color: #c1d3e6;
+    }
 
-    #contact p {
-      color: #d4dfeb;
+    #contact h2 {
+      color: white;
+    }
+
+    #contact p:not(.eyebrow) {
       max-width: 600px;
+      color: #d4dfeb;
     }
 
     #contact .button {
+      border-color: white;
       background: white;
       color: var(--navy-dark);
-      border-color: white;
     }
 
-    #contact .button:hover { background: #eaf0f7; }
+    #contact .button:hover {
+      background: #eaf0f7;
+    }
 
     footer {
       padding: 24px 0;
@@ -359,54 +454,96 @@
 
     .footer-content {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-between;
       gap: 10px;
     }
 
-    footer a { text-decoration: none; }
+    footer a {
+      text-decoration: none;
+    }
 
     @media (max-width: 720px) {
-      .navigation {
-        padding: 14px 0;
-        flex-direction: column;
-        gap: 5px;
+      html {
+        scroll-padding-top: 125px;
       }
 
-      nav { gap: 24px; }
+      .navigation {
+        flex-direction: column;
+        gap: 5px;
+        padding: 14px 0;
+      }
 
-      html { scroll-padding-top: 125px; }
+      nav {
+        gap: 24px;
+      }
 
-      .hero { padding: 64px 0; }
+      .hero {
+        padding: 64px 0;
+      }
 
-      section { padding: 54px 0; }
+      section {
+        padding: 54px 0;
+      }
 
       .project-overview,
-      .about-layout { grid-template-columns: 1fr; }
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
 
-      .about-layout { gap: 24px; }
+      .about-layout {
+        gap: 24px;
+      }
 
       .project-preview,
-      .project-content { padding: 26px; }
+      .project-content {
+        padding: 26px;
+      }
 
-      summary { padding: 20px 26px; }
+      .dashboard-section {
+        padding: 20px;
+      }
 
-      .case-study { padding: 0 26px 26px; }
+      summary {
+        padding: 20px 26px;
+      }
+
+      .case-study {
+        padding: 0 26px 26px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .project-content .button {
+        width: 100%;
+        padding-inline: 12px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
 
   <header>
     <div class="container navigation">
-      <a class="brand" href="#home" aria-label="Muhammad Nasibli home">
+      <a
+        class="brand"
+        href="#home"
+        aria-label="Muhammad Nasibli home"
+      >
         Muhammad Nasibli
       </a>
 
@@ -421,21 +558,37 @@
   <main id="main">
     <div class="hero" id="home">
       <div class="container">
-        <p class="eyebrow">Data & Business Intelligence Portfolio</p>
+        <p class="eyebrow">
+          Data & Business Intelligence Portfolio
+        </p>
+
         <h1>Muhammad Nasibli</h1>
+
         <p class="role">
           Data Analyst | Business Intelligence Analyst
         </p>
+
         <p class="intro">
           I turn data into clear insights through analysis,
           visualization, and business intelligence.
         </p>
 
         <div class="buttons">
-          <a class="button" href="#projects">Explore My Projects</a>
-          <a class="button secondary"
-             href="https://github.com/muhammadnasibli">
+          <a class="button" href="#projects">
+            Explore My Projects
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/muhammadnasibli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             View GitHub
+            <span aria-hidden="true">↗</span>
+            <span class="link-note" style="color: inherit;">
+              (new tab)
+            </span>
           </a>
         </div>
       </div>
@@ -444,18 +597,23 @@
     <section id="projects" aria-labelledby="projects-title">
       <div class="container">
         <p class="eyebrow">Selected work</p>
+
         <h2 class="section-title" id="projects-title">
           From data to insight.
         </h2>
+
         <p class="section-description">
           Personal projects exploring business questions through
           data analysis and clear, interactive visualizations.
         </p>
 
-        <article class="project">
+        <article class="project" aria-labelledby="olist-title">
           <div class="project-overview">
             <div class="project-preview">
-              <span class="preview-label">Project snapshot</span>
+              <span class="preview-label">
+                Project snapshot
+              </span>
+
               <h3>Olist Sales & Delivery Overview</h3>
 
               <div class="metrics">
@@ -463,10 +621,12 @@
                   <span>Total sales · excluding freight</span>
                   <strong>2,981,759</strong>
                 </div>
+
                 <div class="metric">
                   <span>Delivered orders</span>
                   <strong>21,931</strong>
                 </div>
+
                 <div class="metric">
                   <span>Late delivery rate</span>
                   <strong>3.50%</strong>
@@ -479,16 +639,23 @@
             </div>
 
             <div class="project-content">
-              <p class="eyebrow">Featured project · Tableau</p>
-              <h3>Olist Sales & Delivery Analysis</h3>
+              <p class="eyebrow">
+                Featured project · Tableau
+              </p>
+
+              <h3 id="olist-title">
+                Olist Sales & Delivery Analysis
+              </h3>
+
               <p>
                 An interactive dashboard examining monthly sales,
                 sales by state, and delivery performance for
                 delivered orders.
               </p>
+
               <p>
-                The dashboard connects sales and delivery metrics,
-                with state selections filtering the charts and KPIs.
+                Select a state in the interactive dashboard to
+                filter the charts and KPIs.
               </p>
 
               <div class="tags" aria-label="Project topics">
@@ -496,40 +663,62 @@
                 <span class="tag">Data Visualization</span>
                 <span class="tag">Sales Analysis</span>
               </div>
+
+              <div class="buttons">
+                <a
+                  class="button"
+                  href="https://public.tableau.com/app/profile/muhammed.nesibli/viz/OlistSalesDeliveryOverview2017/Dashboard1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open Interactive Dashboard
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <p class="link-note">
+                Opens Tableau Public in a new tab.
+              </p>
             </div>
           </div>
 
+          <div class="dashboard-section">
+            <h3 class="dashboard-heading">
+              Dashboard preview
+            </h3>
+
+            <figure class="dashboard-figure">
+              <a
+                href="Olist%20Dashboard%20Image.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open the Olist dashboard image in full size in a new tab"
+              >
+                <img
+                  class="dashboard-image"
+                  src="Olist%20Dashboard%20Image.png"
+                  alt="Olist sales and delivery dashboard for January to August 2017, showing sales KPIs, monthly sales trends, sales by state, and delivery performance."
+                  loading="lazy"
+                >
+              </a>
+
+              <figcaption class="dashboard-caption">
+                January–August 2017 · Static preview.
+                Click the image to view it in full size in a new tab,
+                or use the button above to explore the interactive
+                dashboard.
+              </figcaption>
+            </figure>
+          </div>
+
           <details>
-            <summary>View project details</summary>
-            <div class="case-study"><div class="buttons" style="margin: 24px 0;">
-  <a
-    class="button"
-    href="https://public.tableau.com/app/profile/muhammed.nesibli/viz/OlistSalesDeliveryOverview2017/Dashboard1"
-    target="_blank"
-    rel="noopener"
-  >
-    Open Interactive Dashboard ↗
-  </a>
-</div><figure style="margin: 24px 0;">
-  <a href="Olist%20Dashboard%20Image.png"
-     target="_blank"
-     rel="noopener"
-     aria-label="Open the Olist dashboard image in full size">
-    <img
-      src="Olist%20Dashboard%20Image.png"
-      alt="Olist sales and delivery dashboard for January to August 2017, showing sales KPIs, monthly sales trends, sales by state, and delivery performance."
-      loading="lazy"
-      style="display: block; width: 100%; height: auto;
-             border: 1px solid #dce4ed; border-radius: 10px;"
-    >
-  </a>
-  <figcaption style="margin-top: 10px; font-size: 13px; color: #526176;">
-    Dashboard preview · January–August 2017.
-    Click the image to view it in full size.
-    This preview is a static image.
-  </figcaption>
-</figure>
+            <summary>
+              View project details and findings
+            </summary>
+
+            <div class="case-study">
               <h4>Business question</h4>
+
               <p>
                 How did sales vary across the selected months and
                 states, and how frequently did delivered orders
@@ -537,6 +726,7 @@
               </p>
 
               <h4>Dashboard scope</h4>
+
               <p>
                 The analysis focuses on delivered orders placed
                 between January 1 and August 31, 2017. All dashboard
@@ -544,16 +734,19 @@
               </p>
 
               <h4>Key findings</h4>
+
               <ul>
                 <li>
                   Monthly sales increased overall, rising from
                   approximately 112K in January to 543K in August,
                   with declines in April and June.
                 </li>
+
                 <li>
                   SP had the highest sales among the displayed
                   states, followed by RJ and MG.
                 </li>
+
                 <li>
                   Of 21,931 delivered orders, 21,162 were on time,
                   768 were late, and one had an unknown delivery
@@ -562,26 +755,30 @@
               </ul>
 
               <h4>Metric definitions</h4>
+
               <ul>
                 <li>
                   <strong>Total Sales:</strong>
                   Sum of product prices for delivered orders in
                   the selected purchase period, excluding freight.
                 </li>
+
                 <li>
                   <strong>Delivered Orders:</strong>
                   Number of unique delivered orders placed during
                   the selected period.
                 </li>
+
                 <li>
                   <strong>Late Delivery Rate:</strong>
                   Late orders divided by delivered orders with
-                  known delivery dates. Unknown delivery dates
-                  are excluded from the denominator.
+                  known delivery dates. Orders with unknown
+                  delivery dates are excluded from the denominator.
                 </li>
               </ul>
 
               <h4>Interpretation note</h4>
+
               <p>
                 These findings describe the selected eight-month
                 period, not the full dataset. The dashboard shows
@@ -598,13 +795,16 @@
       <div class="container about-layout">
         <div>
           <p class="eyebrow">About me</p>
+
           <h2 class="section-title" id="about-title">
             Clear analysis. Meaningful insights.
           </h2>
+
           <p>
             I'm Muhammad Nasibli, and I'm building a portfolio
             focused on data analysis and business intelligence.
           </p>
+
           <p>
             Through personal projects, I explore business questions,
             define useful metrics, and present findings through
@@ -614,6 +814,7 @@
 
         <div class="focus-panel">
           <h3>Current focus</h3>
+
           <ul>
             <li>Interactive dashboards with Tableau</li>
             <li>Sales and delivery performance analysis</li>
@@ -626,18 +827,30 @@
 
     <section id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <p class="eyebrow" style="color: #c1d3e6;">Get in touch</p>
+        <p class="eyebrow">Get in touch</p>
+
         <h2 class="section-title" id="contact-title">
           Let's connect.
         </h2>
+
         <p>
           Interested in my work? Explore my GitHub profile for
           projects and updates.
         </p>
-        <a class="button"
-           href="https://github.com/muhammadnasibli">
+
+        <a
+          class="button"
+          href="https://github.com/muhammadnasibli"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Visit My GitHub
+          <span aria-hidden="true">↗</span>
         </a>
+
+        <p class="link-note">
+          Opens in a new tab.
+        </p>
       </div>
     </section>
   </main>
