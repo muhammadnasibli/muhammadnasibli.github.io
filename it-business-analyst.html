@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Muhammad Nasibli — IT Business Analyst portfolio. Explore a personal case study covering process mapping, requirements, business rules, user stories, and acceptance criteria."
+    content="Muhammad Nasibli — IT Business Analyst portfolio featuring process mapping, business rules, functional requirements, user stories, and acceptance criteria."
   >
 
   <title>Muhammad Nasibli | IT Business Analyst Portfolio</title>
@@ -38,7 +38,7 @@
       background: var(--white);
       color: var(--text);
       line-height: 1.7;
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     a {
@@ -46,7 +46,8 @@
     }
 
     a:focus-visible,
-    summary:focus-visible {
+    summary:focus-visible,
+    [tabindex="0"]:focus-visible {
       outline: 3px solid #b46915;
       outline-offset: 5px;
     }
@@ -563,6 +564,23 @@
       margin-top: 24px;
     }
 
+    .contact-details {
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-details li {
+      margin-bottom: 8px;
+      color: #d4dfeb;
+      font-size: 14px;
+    }
+
+    .contact-details a {
+      color: white;
+      text-underline-offset: 4px;
+    }
+
     footer {
       padding: 24px 0;
       color: var(--muted);
@@ -742,14 +760,8 @@
             Explore My Projects
           </a>
 
-          <a
-            class="button secondary"
-            href="https://github.com/muhammadnasibli"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View GitHub
-            <span aria-hidden="true">↗</span>
+          <a class="button secondary" href="#contact">
+            Get in Touch
           </a>
         </div>
       </div>
@@ -869,7 +881,7 @@
                 <img
                   class="diagram-image"
                   src="OnlineAccountOpening.png"
-                  alt="Simplified online account-opening flowchart. Applications are checked for completeness. Missing information is requested and resubmitted for another check. Complete applications are reviewed and either approved for account opening or rejected, with the customer notified of the outcome."
+                  alt="Simplified online account-opening flowchart showing completeness checks, requests for missing information, application review, approval, account opening, rejection, and customer notifications."
                   loading="lazy"
                 >
               </a>
@@ -1145,12 +1157,14 @@
               >
                 <table>
                   <caption>Proposed business rules</caption>
+
                   <thead>
                     <tr>
                       <th scope="col">ID</th>
                       <th scope="col">Rule</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     <tr>
                       <td class="id">BR-01</td>
@@ -1202,6 +1216,7 @@
               >
                 <table>
                   <caption>Proposed system behaviour</caption>
+
                   <thead>
                     <tr>
                       <th scope="col">ID</th>
@@ -1209,6 +1224,7 @@
                       <th scope="col">Related rules</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     <tr>
                       <td class="id">FR-01</td>
@@ -1548,6 +1564,7 @@
               >
                 <table>
                   <caption>Process-to-requirement mapping</caption>
+
                   <thead>
                     <tr>
                       <th scope="col">Process step</th>
@@ -1555,6 +1572,7 @@
                       <th scope="col">User stories</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     <tr>
                       <td>Application received</td>
@@ -1637,34 +1655,28 @@
           <p class="eyebrow">About me</p>
 
           <h2 class="section-title" id="about-title">
-            An analytical foundation.
-            A business analysis focus.
+            Understanding business needs.
+            Defining clear requirements.
           </h2>
 
           <p>
             I am pursuing internship opportunities in IT business
-            analysis and building practical skills through
-            structured personal projects.
+            analysis and developing my skills through structured
+            personal projects.
           </p>
 
           <p>
-            My data analysis background includes working with
-            R, SQL, and Tableau. I am now extending that analytical
-            approach to process mapping, requirements
-            documentation, and user stories.
+            My current work focuses on documenting business
+            processes, identifying decision points, and translating
+            business needs into functional requirements, user
+            stories, and acceptance criteria.
           </p>
 
           <p>
-            This portfolio presents my current learning work:
-            making workflows understandable, identifying
-            decision points, and connecting business needs
-            to proposed system behaviour.
+            This portfolio presents my approach to making workflows
+            understandable and connecting process steps with
+            proposed system behaviour.
           </p>
-
-          <a href="index.html">
-            View my Data Analyst portfolio
-            <span aria-hidden="true">→</span>
-          </a>
         </div>
 
         <aside class="focus-panel" aria-labelledby="focus-title">
@@ -1676,7 +1688,6 @@
             <li>User stories and acceptance criteria</li>
             <li>Requirements traceability</li>
             <li>Process documentation using draw.io</li>
-            <li>Data analysis using R, SQL, and Tableau</li>
           </ul>
         </aside>
       </div>
@@ -1694,24 +1705,70 @@
           I am interested in opportunities to learn from
           experienced teams and contribute to process
           documentation, requirements analysis, and
-          data-informed problem solving.
+          clear communication of business needs.
         </p>
 
         <div class="contact-buttons">
           <a
             class="button"
-            href="https://github.com/muhammadnasibli"
+            href="mailto:muhammednesibli777@gmail.com"
+          >
+            Email Me
+          </a>
+
+          <a
+            class="button outline"
+            href="https://t.me/muhammadnasibli"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Contact Muhammad Nasibli on Telegram in a new tab"
           >
-            View GitHub
+            Telegram
             <span aria-hidden="true">↗</span>
           </a>
 
-          <a class="button outline" href="index.html">
-            Data Analyst Portfolio
+          <a
+            class="button outline"
+            href="https://wa.me/994555550111"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Muhammad Nasibli on WhatsApp in a new tab"
+          >
+            WhatsApp
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
+
+        <ul class="contact-details" aria-label="Contact details">
+          <li>
+            Email:
+            <a href="mailto:muhammednesibli777@gmail.com">
+              muhammednesibli777@gmail.com
+            </a>
+          </li>
+
+          <li>
+            Telegram:
+            <a
+              href="https://t.me/muhammadnasibli"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @muhammadnasibli
+            </a>
+          </li>
+
+          <li>
+            WhatsApp:
+            <a
+              href="https://wa.me/994555550111"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +994 55 555 01 11
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -1719,7 +1776,7 @@
   <footer>
     <div class="container footer-content">
       <span>
-        © 2026 Muhammad Nasibli
+        © 2026 Muhammad Nasibli · IT Business Analyst Portfolio
       </span>
 
       <a href="#home">Back to top ↑</a>
