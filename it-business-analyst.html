@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Muhammad Nasibli — IT Business Analyst portfolio. Explore a personal case study covering process mapping, requirements, business rules, user stories, and acceptance criteria."
+  >
+
+  <title>Muhammad Nasibli | IT Business Analyst Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #24476a;
+      --navy-dark: #17324d;
+      --text: #1e293b;
+      --muted: #526176;
+      --line: #dce4ed;
+      --soft: #f4f7fb;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: var(--navy);
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #b46915;
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 20px;
+      z-index: 100;
+      padding: 10px 18px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navigation {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      padding-block: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--navy);
+    }
+
+    .hero {
+      padding: 100px 0 90px;
+      background: radial-gradient(
+        ellipse at top right,
+        #eaf1f9,
+        transparent 65%
+      );
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy-dark);
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(42px, 7vw, 72px);
+      letter-spacing: -2.5px;
+    }
+
+    .role {
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-size: clamp(18px, 2.8vw, 25px);
+      font-weight: 600;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 12px 22px;
+      border: 1px solid var(--navy);
+      border-radius: 8px;
+      background: var(--navy);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: var(--navy-dark);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .button.secondary:hover {
+      background: var(--soft);
+    }
+
+    section {
+      padding: 74px 0;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: clamp(28px, 4vw, 36px);
+      letter-spacing: -1px;
+    }
+
+    .section-description {
+      max-width: 690px;
+      margin: 0 0 32px;
+      color: var(--muted);
+    }
+
+    #projects {
+      background: var(--soft);
+    }
+
+    .project {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 8px 30px rgba(23, 50, 77, 0.04);
+    }
+
+    .project-overview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-preview {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 38px;
+      background: #eaf0f7;
+    }
+
+    .preview-label {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .project-preview h3 {
+      margin: 12px 0 24px;
+      font-size: 27px;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 10px;
+    }
+
+    .metric {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 13px 16px;
+      border-radius: 8px;
+      background: white;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .metric strong {
+      color: var(--navy-dark);
+      font-size: 17px;
+    }
+
+    .period {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .project-content {
+      padding: 38px;
+    }
+
+    .project-content h3 {
+      margin: 12px 0 16px;
+      font-size: 26px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 22px 0;
+    }
+
+    .tag {
+      padding: 5px 11px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--soft);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .link-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .diagram-section {
+      padding: 30px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 100px;
+    }
+
+    .diagram-heading {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+
+    .diagram-figure {
+      margin: 0;
+    }
+
+    .diagram-figure a {
+      display: block;
+      border-radius: 10px;
+    }
+
+    .diagram-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: white;
+    }
+
+    .diagram-caption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 100px;
+    }
+
+    summary {
+      padding: 20px 32px;
+      color: var(--navy);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    summary:hover {
+      background: var(--soft);
+    }
+
+    .case-study {
+      padding: 0 32px 32px;
+    }
+
+    .case-study h4 {
+      margin: 24px 0 8px;
+      color: var(--navy-dark);
+      font-size: 17px;
+    }
+
+    .case-study h5 {
+      margin: 0 0 10px;
+      color: var(--navy-dark);
+      font-size: 16px;
+    }
+
+    .case-study p,
+    .case-study li {
+      color: var(--muted);
+    }
+
+    .case-study strong {
+      color: var(--navy-dark);
+      font-weight: 750;
+    }
+
+    .case-study ul,
+    .case-study ol {
+      padding-left: 22px;
+    }
+
+    .case-study li {
+      margin-bottom: 9px;
+    }
+
+    .preparation-note {
+      margin: 16px 0 24px;
+      padding: 18px 22px;
+      border-left: 4px solid var(--navy);
+      border-radius: 0 8px 8px 0;
+      background: var(--soft);
+    }
+
+    .preparation-note p {
+      margin: 0 0 12px;
+    }
+
+    .preparation-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .table-wrap {
+      margin: 18px 0 24px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    caption {
+      padding: 12px 16px;
+      background: var(--soft);
+      color: var(--navy-dark);
+      font-weight: 700;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--soft);
+      color: var(--navy-dark);
+      font-weight: 700;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .id {
+      white-space: nowrap;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .story {
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .story p {
+      margin: 0 0 12px;
+    }
+
+    .story ul {
+      margin-bottom: 0;
+    }
+
+    .criteria-label {
+      color: var(--navy-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: start;
+      gap: 60px;
+    }
+
+    .about-layout p {
+      color: var(--muted);
+    }
+
+    .focus-panel {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--soft);
+    }
+
+    .focus-panel h3 {
+      margin: 0 0 16px;
+      font-size: 19px;
+    }
+
+    .focus-panel ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .focus-panel li {
+      margin-bottom: 9px;
+    }
+
+    #contact {
+      background: var(--navy-dark);
+      color: white;
+    }
+
+    #contact .eyebrow {
+      color: #c1d3e6;
+    }
+
+    #contact h2 {
+      color: white;
+    }
+
+    #contact p:not(.eyebrow) {
+      max-width: 620px;
+      color: #d4dfeb;
+    }
+
+    #contact .button {
+      border-color: white;
+      background: white;
+      color: var(--navy-dark);
+    }
+
+    #contact .button:hover {
+      background: #eaf0f7;
+    }
+
+    #contact .button.outline {
+      background: transparent;
+      color: white;
+      border-color: #8fa8c2;
+    }
+
+    #contact .button.outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    footer {
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 720px) {
+      html {
+        scroll-padding-top: 150px;
+      }
+
+      .navigation {
+        flex-direction: column;
+        gap: 5px;
+        padding: 14px 0;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 8px 20px;
+      }
+
+      .hero {
+        padding: 64px 0;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .project-overview,
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .about-layout {
+        gap: 24px;
+      }
+
+      .project-preview,
+      .project-content {
+        padding: 26px;
+      }
+
+      .diagram-section {
+        padding: 20px;
+        scroll-margin-top: 150px;
+      }
+
+      details {
+        scroll-margin-top: 150px;
+      }
+
+      summary {
+        padding: 20px 26px;
+      }
+
+      .case-study {
+        padding: 0 26px 26px;
+      }
+
+      .preparation-note,
+      .story {
+        padding: 16px;
+      }
+
+      th,
+      td {
+        padding: 11px 12px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .project-content .button,
+      .contact-buttons .button {
+        width: 100%;
+        padding-inline: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      header,
+      .skip-link,
+      .hero .buttons,
+      .contact-buttons,
+      footer {
+        display: none;
+      }
+
+      section,
+      .hero {
+        padding: 24px 0;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .project {
+        box-shadow: none;
+      }
+
+      .table-wrap {
+        overflow: visible;
+      }
+
+      .story,
+      tr {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <header>
+    <div class="container navigation">
+      <a
+        class="brand"
+        href="#home"
+        aria-label="Muhammad Nasibli home"
+      >
+        Muhammad Nasibli
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">My Portfolio</p>
+
+        <h1>Muhammad Nasibli</h1>
+
+        <p class="role">IT Business Analyst</p>
+
+        <p class="intro">
+          I am developing my business analysis skills through
+          personal projects focused on understanding business
+          needs, mapping processes, and documenting clear
+          requirements.
+        </p>
+
+        <div class="buttons">
+          <a class="button" href="#projects">
+            Explore My Projects
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/muhammadnasibli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow">Selected work</p>
+
+        <h2 class="section-title" id="projects-title">
+          From business needs to clear requirements.
+        </h2>
+
+        <p class="section-description">
+          Personal case studies exploring business workflows
+          through process mapping, business rules, functional
+          requirements, and user stories.
+        </p>
+
+        <article class="project" aria-labelledby="account-title">
+          <div class="project-overview">
+            <div class="project-preview">
+              <span class="preview-label">
+                Project snapshot
+              </span>
+
+              <h3>Online Account Opening</h3>
+
+              <div class="metrics">
+                <div class="metric">
+                  <span>Process documentation</span>
+                  <strong>Flowchart</strong>
+                </div>
+
+                <div class="metric">
+                  <span>Functional requirements</span>
+                  <strong>8</strong>
+                </div>
+
+                <div class="metric">
+                  <span>User stories</span>
+                  <strong>7</strong>
+                </div>
+
+                <div class="metric">
+                  <span>Business rules</span>
+                  <strong>5</strong>
+                </div>
+              </div>
+
+              <p class="period">
+                Personal case study · Simplified banking scenario
+              </p>
+            </div>
+
+            <div class="project-content">
+              <p class="eyebrow">
+                Featured project · Business Analysis
+              </p>
+
+              <h3 id="account-title">
+                Online Account Opening — Business Analysis Case Study
+              </h3>
+
+              <p>
+                A personal case study documenting a simplified
+                online account-opening workflow, from receiving
+                an application to checking completeness,
+                requesting missing information, and recording
+                an approval or rejection decision.
+              </p>
+
+              <p>
+                The documentation connects process steps with
+                business rules, functional requirements,
+                user stories, and acceptance criteria.
+              </p>
+
+              <div class="tags" aria-label="Project topics">
+                <span class="tag">draw.io</span>
+                <span class="tag">Flowchart</span>
+                <span class="tag">Process Mapping</span>
+                <span class="tag">Requirements</span>
+                <span class="tag">User Stories</span>
+                <span class="tag">Acceptance Criteria</span>
+              </div>
+
+              <div class="buttons">
+                <a class="button" href="#process-flow">
+                  View Process Flow
+                </a>
+
+                <a class="button secondary" href="#case-overview">
+                  Read Case Study
+                </a>
+              </div>
+
+              <p class="link-note">
+                Illustrative portfolio project. Not an official
+                bank workflow or an implemented banking system.
+              </p>
+            </div>
+          </div>
+
+          <div class="diagram-section" id="process-flow">
+            <h3 class="diagram-heading">
+              Online Account Opening — Process Flow
+            </h3>
+
+            <figure class="diagram-figure">
+              <a
+                href="OnlineAccountOpening.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open the account-opening flowchart in full size in a new tab"
+              >
+                <img
+                  class="diagram-image"
+                  src="OnlineAccountOpening.png"
+                  alt="Simplified online account-opening flowchart. Applications are checked for completeness. Missing information is requested and resubmitted for another check. Complete applications are reviewed and either approved for account opening or rejected, with the customer notified of the outcome."
+                  loading="lazy"
+                >
+              </a>
+
+              <figcaption class="diagram-caption">
+                Process flow created in draw.io.
+                Click the image to view it in full size in a new tab.
+                This is a simplified flowchart, not a BPMN model.
+              </figcaption>
+            </figure>
+          </div>
+
+          <details id="case-overview" open>
+            <summary>
+              Case study overview, scope and assumptions
+            </summary>
+
+            <div class="case-study">
+              <h4>Business question</h4>
+
+              <p>
+                How can an online account-opening application
+                move through completeness checks, requests for
+                additional information, review, and a clear
+                customer outcome?
+              </p>
+
+              <h4>Project objective</h4>
+
+              <p>
+                Document a clear, traceable workflow that prevents
+                incomplete applications from reaching the review
+                stage and describes how customers are informed
+                of the final result.
+              </p>
+
+              <h4>Project approach</h4>
+
+              <ol>
+                <li>
+                  Define the boundaries and assumptions of a
+                  simplified account-opening scenario.
+                </li>
+                <li>
+                  Map the main path and alternative outcomes
+                  in a flowchart using draw.io.
+                </li>
+                <li>
+                  Describe the business rules and system
+                  behaviour supporting the workflow.
+                </li>
+                <li>
+                  Express the requirements as user stories
+                  with observable acceptance criteria.
+                </li>
+                <li>
+                  Link the process steps, requirements,
+                  and stories in a traceability table.
+                </li>
+              </ol>
+
+              <div class="preparation-note">
+                <p>
+                  <strong>Project context:</strong>
+                  This is a personal learning case study.
+                  Requirements are proposed for an illustrative
+                  scenario; they were not collected from a bank
+                  or validated with real stakeholders.
+                </p>
+
+                <p>
+                  <strong>Delivery boundary:</strong>
+                  The deliverables are analysis documents and
+                  a process diagram. No working banking system,
+                  integration, or production deployment was built.
+                </p>
+              </div>
+
+              <h4>Scenario roles</h4>
+
+              <ul>
+                <li>
+                  <strong>Customer:</strong>
+                  Submits an application, provides missing
+                  information, and receives the result.
+                </li>
+                <li>
+                  <strong>Operations specialist:</strong>
+                  Reviews complete applications and records
+                  an approval or rejection decision.
+                </li>
+                <li>
+                  <strong>Digital banking system:</strong>
+                  Supports application registration, completeness
+                  checks, routing, decision recording, and
+                  customer notifications.
+                </li>
+              </ul>
+
+              <h4>In scope</h4>
+
+              <ul>
+                <li>Receiving an online application.</li>
+                <li>Checking application completeness.</li>
+                <li>Requesting and receiving missing information.</li>
+                <li>Repeating the completeness check.</li>
+                <li>Reviewing complete applications.</li>
+                <li>Recording an approval or rejection.</li>
+                <li>Initiating account opening after approval.</li>
+                <li>Notifying the customer of the outcome.</li>
+              </ul>
+
+              <h4>Out of scope</h4>
+
+              <ul>
+                <li>
+                  Detailed identity verification, document
+                  authentication, compliance, and fraud checks.
+                </li>
+                <li>
+                  Actual eligibility criteria and account
+                  approval policies.
+                </li>
+                <li>
+                  Customer withdrawal, application expiry,
+                  and non-response handling.
+                </li>
+                <li>
+                  Technical failures, retries, and recovery
+                  during account opening or notification delivery.
+                </li>
+                <li>
+                  API specifications, database design,
+                  and implementation.
+                </li>
+              </ul>
+
+              <h4>Assumptions</h4>
+
+              <ul>
+                <li>
+                  Applications are received through an online
+                  channel.
+                </li>
+                <li>
+                  The system checks completeness against a
+                  predefined list of mandatory information.
+                  The exact fields are not specified in this case.
+                </li>
+                <li>
+                  Customers eventually provide the requested
+                  missing information.
+                </li>
+                <li>
+                  Complete applications are reviewed by an
+                  authorised operations specialist.
+                </li>
+                <li>
+                  For this simplified workflow, account opening
+                  succeeds after approval and notifications
+                  are delivered successfully.
+                </li>
+              </ul>
+
+              <h4>Validation questions for a real project</h4>
+
+              <ul>
+                <li>
+                  Which fields and documents are mandatory?
+                </li>
+                <li>
+                  What approval criteria and compliance checks
+                  must be applied?
+                </li>
+                <li>
+                  Which notification channels should be used?
+                </li>
+                <li>
+                  How long can an application wait for
+                  missing information?
+                </li>
+                <li>
+                  What should happen if account opening
+                  or notification delivery fails?
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Process walkthrough
+            </summary>
+
+            <div class="case-study">
+              <h4>Main path</h4>
+
+              <ol>
+                <li>
+                  The application is received.
+                </li>
+                <li>
+                  The system checks whether all mandatory
+                  information is present.
+                </li>
+                <li>
+                  A complete application moves to review.
+                </li>
+                <li>
+                  An operations specialist reviews the
+                  application and records a decision.
+                </li>
+                <li>
+                  If approved, account opening is initiated.
+                </li>
+                <li>
+                  After successful account opening, the
+                  customer is notified.
+                </li>
+                <li>
+                  The process ends with an opened account.
+                </li>
+              </ol>
+
+              <h4>Alternative path: missing information</h4>
+
+              <p>
+                If the application is incomplete, the customer
+                is asked to provide the missing information.
+                After submission, the application returns to
+                the completeness check. It does not move
+                directly to review.
+              </p>
+
+              <h4>Alternative path: rejection</h4>
+
+              <p>
+                If the application is rejected during review,
+                the customer is notified and the process ends
+                with a rejected application. Account opening
+                is not initiated.
+              </p>
+
+              <h4>Important distinction</h4>
+
+              <p>
+                Completeness and approval are separate decisions.
+                A complete application contains the mandatory
+                information, but it is not automatically approved.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Business rules and functional requirements
+            </summary>
+
+            <div class="case-study">
+              <h4>Business rules</h4>
+
+              <p>
+                The following rules are proposed for this
+                illustrative scenario, not presented as
+                actual bank policy.
+              </p>
+
+              <div
+                class="table-wrap"
+                role="region"
+                aria-label="Business rules table"
+                tabindex="0"
+              >
+                <table>
+                  <caption>Proposed business rules</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Rule</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="id">BR-01</td>
+                      <td>
+                        Incomplete applications must not
+                        proceed to review.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="id">BR-02</td>
+                      <td>
+                        Applications must be checked again
+                        after missing information is submitted.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="id">BR-03</td>
+                      <td>
+                        Only complete applications may receive
+                        an approval or rejection decision.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="id">BR-04</td>
+                      <td>
+                        Account opening may be initiated only
+                        for approved applications.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="id">BR-05</td>
+                      <td>
+                        Customers must be notified after
+                        successful account opening or
+                        application rejection.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Functional requirements</h4>
+
+              <div
+                class="table-wrap"
+                role="region"
+                aria-label="Functional requirements table"
+                tabindex="0"
+              >
+                <table>
+                  <caption>Proposed system behaviour</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Requirement</th>
+                      <th scope="col">Related rules</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="id">FR-01</td>
+                      <td>
+                        The system shall register an online
+                        account-opening application when
+                        it is submitted.
+                      </td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-02</td>
+                      <td>
+                        The system shall check the application
+                        against the predefined mandatory
+                        information list.
+                      </td>
+                      <td>BR-01, BR-03</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-03</td>
+                      <td>
+                        The system shall identify missing
+                        mandatory information and request
+                        it from the customer.
+                      </td>
+                      <td>BR-01</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-04</td>
+                      <td>
+                        The system shall accept additional
+                        information for the existing application
+                        and repeat the completeness check.
+                      </td>
+                      <td>BR-02</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-05</td>
+                      <td>
+                        The system shall make complete applications
+                        available to an authorised operations
+                        specialist for review and prevent
+                        incomplete applications from entering
+                        the review queue.
+                      </td>
+                      <td>BR-01, BR-03</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-06</td>
+                      <td>
+                        The system shall allow an authorised
+                        operations specialist to record one
+                        approval or rejection decision for
+                        a complete application under review.
+                      </td>
+                      <td>BR-03</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-07</td>
+                      <td>
+                        The system shall initiate account opening
+                        for an approved application and record
+                        the successful result.
+                      </td>
+                      <td>BR-04</td>
+                    </tr>
+                    <tr>
+                      <td class="id">FR-08</td>
+                      <td>
+                        The system shall notify the customer
+                        after successful account opening
+                        or after a rejection decision.
+                      </td>
+                      <td>BR-05</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              User stories and acceptance criteria
+            </summary>
+
+            <div class="case-study">
+              <h4>User stories</h4>
+
+              <p>
+                These stories describe the proposed behaviour
+                of the simplified solution. Acceptance criteria
+                are documented scenarios, not evidence of
+                executed software tests.
+              </p>
+
+              <article class="story" aria-labelledby="us01">
+                <h5 id="us01">
+                  US-01 · Submit an application
+                </h5>
+
+                <p>
+                  As a customer, I want to submit an
+                  account-opening application online,
+                  so that I can request an account without
+                  visiting a branch.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given a customer submits an application
+                    through the online channel, when the system
+                    receives it, then the application is
+                    registered and a completeness check begins.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="story" aria-labelledby="us02">
+                <h5 id="us02">
+                  US-02 · Identify missing information
+                </h5>
+
+                <p>
+                  As a customer, I want to know which
+                  mandatory information is missing,
+                  so that I can complete my application.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given an application is missing mandatory
+                    information, when the completeness check
+                    finishes, then the system identifies
+                    the missing items and requests them
+                    from the customer.
+                  </li>
+                  <li>
+                    Given the application is incomplete,
+                    when routing is evaluated, then it
+                    does not enter the review queue.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="story" aria-labelledby="us03">
+                <h5 id="us03">
+                  US-03 · Submit additional information
+                </h5>
+
+                <p>
+                  As a customer, I want to provide the requested
+                  missing information, so that my application
+                  can continue.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given missing information has been requested,
+                    when the customer submits additional
+                    information, then it is associated with
+                    the existing application and the completeness
+                    check is repeated.
+                  </li>
+                  <li>
+                    Given the repeated check finds all mandatory
+                    information present, when the check finishes,
+                    then the application moves to review.
+                  </li>
+                  <li>
+                    Given mandatory information is still missing,
+                    when the repeated check finishes, then the
+                    remaining items are requested and the
+                    application stays outside the review queue.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="story" aria-labelledby="us04">
+                <h5 id="us04">
+                  US-04 · Review complete applications
+                </h5>
+
+                <p>
+                  As an operations specialist, I want to review
+                  complete applications, so that I can assess
+                  requests with the necessary information available.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given an application has passed the
+                    completeness check, when an authorised
+                    specialist opens the review queue,
+                    then the application is available for review.
+                  </li>
+                  <li>
+                    Given the specialist selects the application,
+                    when its review view opens, then the submitted
+                    application information is displayed.
+                  </li>
+                  <li>
+                    Given an application has not passed the
+                    completeness check, when the review queue
+                    is opened, then that application is not listed.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="story" aria-labelledby="us05">
+                <h5 id="us05">
+                  US-05 · Record a review decision
+                </h5>
+
+                <p>
+                  As an operations specialist, I want to record
+                  an approval or rejection decision, so that the
+                  application can follow the appropriate next step.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given a complete application is under review,
+                    when an authorised specialist confirms
+                    approval or rejection, then the system
+                    saves the selected decision.
+                  </li>
+                  <li>
+                    Given a decision has already been recorded,
+                    when a second decision is attempted,
+                    then the system does not create a conflicting
+                    decision within this simplified workflow.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="story" aria-labelledby="us06">
+                <h5 id="us06">
+                  US-06 · Open an approved account
+                </h5>
+
+                <p>
+                  As a customer with an approved application,
+                  I want my account to be opened, so that
+                  I can begin using the banking service.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given an application is approved,
+                    when the approval decision is saved,
+                    then account opening is initiated.
+                  </li>
+                  <li>
+                    Given account opening succeeds,
+                    when the result is returned,
+                    then the successful opening is recorded.
+                  </li>
+                  <li>
+                    Given an application is rejected,
+                    when the decision is processed,
+                    then account opening is not initiated.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="story" aria-labelledby="us07">
+                <h5 id="us07">
+                  US-07 · Receive the outcome
+                </h5>
+
+                <p>
+                  As a customer, I want to receive a notification
+                  about the outcome, so that I know whether
+                  my account was opened or my application
+                  was rejected.
+                </p>
+
+                <p class="criteria-label">Acceptance criteria</p>
+
+                <ul>
+                  <li>
+                    Given account opening has completed
+                    successfully, when the success is recorded,
+                    then the system sends an account-opening
+                    confirmation to the customer.
+                  </li>
+                  <li>
+                    Given an application is rejected,
+                    when the rejection decision is saved,
+                    then the system sends a rejection
+                    notification to the customer.
+                  </li>
+                  <li>
+                    Given an application is approved but account
+                    opening is not yet confirmed, when
+                    notifications are evaluated, then no
+                    account-opened confirmation is sent.
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Requirements traceability
+            </summary>
+
+            <div class="case-study">
+              <h4>Connecting the documentation</h4>
+
+              <p>
+                This table links each process step to the
+                functional requirements and user stories
+                supporting it.
+              </p>
+
+              <div
+                class="table-wrap"
+                role="region"
+                aria-label="Requirements traceability table"
+                tabindex="0"
+              >
+                <table>
+                  <caption>Process-to-requirement mapping</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Process step</th>
+                      <th scope="col">Requirements</th>
+                      <th scope="col">User stories</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Application received</td>
+                      <td>FR-01</td>
+                      <td>US-01</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Check application completeness /
+                        Application complete?
+                      </td>
+                      <td>FR-02</td>
+                      <td>US-01, US-02, US-03</td>
+                    </tr>
+                    <tr>
+                      <td>Request missing information</td>
+                      <td>FR-03</td>
+                      <td>US-02</td>
+                    </tr>
+                    <tr>
+                      <td>Customer submits missing information</td>
+                      <td>FR-04</td>
+                      <td>US-03</td>
+                    </tr>
+                    <tr>
+                      <td>Review application</td>
+                      <td>FR-05</td>
+                      <td>US-04</td>
+                    </tr>
+                    <tr>
+                      <td>Application approved?</td>
+                      <td>FR-06</td>
+                      <td>US-05</td>
+                    </tr>
+                    <tr>
+                      <td>Open account / Account opened</td>
+                      <td>FR-07</td>
+                      <td>US-06</td>
+                    </tr>
+                    <tr>
+                      <td>Notify customer of account opening</td>
+                      <td>FR-08</td>
+                      <td>US-07</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Notify customer of rejection /
+                        Application rejected
+                      </td>
+                      <td>FR-08</td>
+                      <td>US-07</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Documentation outcome</h4>
+
+              <p>
+                The case study provides one process flow,
+                five proposed business rules, eight functional
+                requirements, and seven user stories with
+                acceptance criteria.
+              </p>
+
+              <p>
+                These are documentation deliverables.
+                No operational improvements, conversion gains,
+                or processing-time reductions have been measured.
+              </p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div>
+          <p class="eyebrow">About me</p>
+
+          <h2 class="section-title" id="about-title">
+            An analytical foundation.
+            A business analysis focus.
+          </h2>
+
+          <p>
+            I am pursuing internship opportunities in IT business
+            analysis and building practical skills through
+            structured personal projects.
+          </p>
+
+          <p>
+            My data analysis background includes working with
+            R, SQL, and Tableau. I am now extending that analytical
+            approach to process mapping, requirements
+            documentation, and user stories.
+          </p>
+
+          <p>
+            This portfolio presents my current learning work:
+            making workflows understandable, identifying
+            decision points, and connecting business needs
+            to proposed system behaviour.
+          </p>
+
+          <a href="index.html">
+            View my Data Analyst portfolio
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <aside class="focus-panel" aria-labelledby="focus-title">
+          <h3 id="focus-title">Current focus</h3>
+
+          <ul>
+            <li>Business process mapping and flowcharts</li>
+            <li>Business rules and functional requirements</li>
+            <li>User stories and acceptance criteria</li>
+            <li>Requirements traceability</li>
+            <li>Process documentation using draw.io</li>
+            <li>Data analysis using R, SQL, and Tableau</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+
+        <h2 class="section-title" id="contact-title">
+          Open to IT Business Analyst internships.
+        </h2>
+
+        <p>
+          I am interested in opportunities to learn from
+          experienced teams and contribute to process
+          documentation, requirements analysis, and
+          data-informed problem solving.
+        </p>
+
+        <div class="contact-buttons">
+          <a
+            class="button"
+            href="https://github.com/muhammadnasibli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button outline" href="index.html">
+            Data Analyst Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>
+        © 2026 Muhammad Nasibli
+      </span>
+
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
